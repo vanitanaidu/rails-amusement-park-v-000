@@ -1,9 +1,8 @@
 class RidesController < ApplicationController
 
-  def new
-
-      @ride = Ride.new
-
+  def create
+      @ride = Ride.create
+      redirect_to user_path(@user)
   end
 
 

@@ -21,8 +21,8 @@ class UsersController < ApplicationController
   def show
     # user can't see this if not logged in
     @user = User.find(params[:id])
-    ride = Ride.new
-  
+    @ride = Ride.new
+
   end
 
   private

@@ -16,7 +16,8 @@ Rails.application.routes.draw do
   resources :sessions, only: [:show]
   resources :users
   resources :attractions
-  resources :rides, only: [:new]
+  resources :rides, only: [:create]
+
 
 
 

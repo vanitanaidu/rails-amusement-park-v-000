@@ -20,7 +20,6 @@ class AttractionsController < ApplicationController
     end
 
   def show
-
     @user = User.new
   end
 
