@@ -7,7 +7,9 @@
 
 
 <%= link_to "Edit Attraction", edit_attraction_path(@attraction)  %>
+<%= binding.pry %>
 
 <p> <%= form_for @user, :url => user_path(@user) do |f| %> </p>
+
   <p> <%= f.submit "Go on this ride" %></p>
 <% end %>
