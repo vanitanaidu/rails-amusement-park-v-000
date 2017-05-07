@@ -1,0 +1,19 @@
+
+
+<%= form_for(:sessions, url: '/signin', method: 'post') do |f| %>
+
+  <%= f.label :name %>
+  <br>
+  <%= f.text_field :name, id: "user[name]" %>
+  <br>
+  <br>
+
+  <%= f.label :password %>
+  <br>
+  <%= f.password_field :password, id: 'user[password]' %>
+  <br>
+  <br>
+  <br>
+
+  <%= f.submit 'Sign In' %>
+  <% end %>
