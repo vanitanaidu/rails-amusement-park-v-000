@@ -12,11 +12,12 @@ class Ride < ActiveRecord::Base
       )
       "Thanks for riding the #{attraction.name}"
      elsif !enough_tickets? && !tall_enough?
-            "Sorry. You do not have enough tickets to ride the #{attraction.name}. You are not tall enough to ride the #{attraction.name}."
+          "Sorry. You do not have enough tickets to ride the #{attraction.name}. You are not tall enough to ride the #{attraction.name}."
       elsif !enough_tickets? && tall_enough?
       "Sorry. You do not have enough tickets to ride the #{attraction.name}."
     elsif !tall_enough? && enough_tickets?
       "Sorry. You are not tall enough to ride the #{attraction.name}."
+
       end
 
   end
@@ -29,5 +30,7 @@ class Ride < ActiveRecord::Base
     def tall_enough?
       self.user.height >= self.attraction.min_height
     end
+
+
 
 end

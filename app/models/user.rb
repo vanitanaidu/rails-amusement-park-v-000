@@ -10,11 +10,18 @@ class User < ActiveRecord::Base
     enum role: [ :user, :admin ]
 
 
+  # def mood
+  #   if happiness > nausea
+  #     "happy"
+  #   else
+  #     "sad"
+  #   end
+  # end
+
   def mood
-    if happiness > nausea
-      "happy"
-    else
-      "sad"
+    if self.happiness && self.nausea
+      mood = self.happiness - self.nausea
+      mood > 0 ? "happy" : "sad"
     end
   end
 
