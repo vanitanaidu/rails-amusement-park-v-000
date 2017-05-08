@@ -6,7 +6,7 @@ class RidesController < ApplicationController
     @message = @ride.take_ride
 
     # redirect_to user_path(@ride.user, :message => @message)
-    redirect_to controller: 'users', action: 'show', id: @ride.user, message: @message.inspect
+    redirect_to user_path(@ride.user), :alert => @message
 
   end
 
