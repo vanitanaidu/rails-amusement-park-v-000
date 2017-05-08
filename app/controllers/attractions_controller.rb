@@ -20,7 +20,8 @@ class AttractionsController < ApplicationController
     end
 
   def show
-    @user = User.new
+    # binding.pry
+    @attraction = Attraction.find(params[:id])
   end
 
   def edit

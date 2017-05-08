@@ -1,16 +1,17 @@
 <div class='info'>
 
-<% if @user.admin %>
-  ADMIN
-<% end %>
- <p><strong> Name: <%= @user.name %> </strong> </p>
- <p> <strong>Tickets: <%= @user.tickets %> </strong> </p>
- <p> <strong>Mood: <%= @user.mood %> </strong> </p>
- <p> <strong>Height: <%= @user.height %> </strong> </p>
+
+  <% if @user.admin %>
+    ADMIN
+  <% end %>
+   <p><strong> Name: <%= @user.name %> </strong></p>
+   <p><strong> Tickets: <%= @user.tickets %> </strong></p>
+   <p><strong> Mood: <%= @user.mood %> </strong></p>
+   <p><strong> Height: <%= @user.height %> </strong></p>
 
 </div>
 <br>
 
 <p><%= link_to 'Log Out', logout_path, method: :delete %></p>
-<p>
+
 <p><%= link_to 'See attractions', attractions_path %></p>
